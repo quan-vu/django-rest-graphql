@@ -44,3 +44,22 @@
 	  }
 	}
 	```
+
+	// Single product
+	```javascript
+	query{
+	  product(id:1){
+	    title
+	  }
+	}
+	```
+	// Result:
+	```javascript
+	{
+	  "data": {
+	    "product": {
+	      "title": "iPhone 8"
+	    }
+	  }
+	}
+	```
