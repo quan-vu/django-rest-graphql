@@ -39,12 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inventory',
     'graphene_django',
+    'rest_framework',
 ]
 
 # GraphQL config
 
 GRAPHENE = {
     'SCHEMA': 'myinventory.schema.schema',
+}
+
+# Django REST framewwork config
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
 
 MIDDLEWARE = [

@@ -21,10 +21,21 @@ from django.conf.urls import url
 from graphene_django.views import GraphQLView
 from myinventory.schema import schema
 
+# Django REST API
+from django.urls import include
+from rest_framework import routers
+from inventory import views
+
+router = routers.DefaultRouter()
+router.register(r'products', views.ProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     # for GraphQL
     url(r'^graphql', GraphQLView.as_view(graphiql=True)),
+
+    # for Django REST API
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
