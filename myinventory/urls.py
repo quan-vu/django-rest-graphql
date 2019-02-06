@@ -16,7 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# GraphQL
+from django.conf.urls import url
+from graphene_django.views import GraphQLView
+from myinventory.schema import schema
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # for GraphQL
+    url(r'^graphql', GraphQLView.as_view(graphiql=True)),
 ]
