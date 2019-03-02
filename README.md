@@ -2,19 +2,25 @@
 
 ## How to setup this project
 
-⋅⋅* Step 1: Start virtualenv
+- Step 1: Start virtualenv
+	```shell
 	$ source graphqlenv/bin/activate
-
-⋅⋅* Step 2: Migrate Django app
+	```
+- Step 2: Migrate Django app
+	```shell
 	$ python manage.py makemigrations
 	$ python manage.py migrate
-
-⋅⋅* Step 3: Create a super user for demo.
+	```
+- Step 3: Create a super user for demo.
+	```shell
 	$ python manage.py createsuperuser
 	admin / django@123
+	```
 
-⋅⋅* Step 4: Run project.
+- Step 4: Run project.
+	```shell
 	$ python manage.py runserver
+	```
 
 
 ## How to test this project
